@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-body;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    backdrop-filter: blur(12px);
+    background: rgba(28, 27, 27, 0.7);
+    border: 1px solid rgba(66, 72, 75, 0.2);
+  }
+
+  .glow-border {
+    @apply transition-all duration-300;
+  }
+  .glow-border:hover {
+    border-color: #bbdef2;
+    box-shadow: 0 0 15px rgba(187, 222, 242, 0.15);
+  }
+
+  .shimmer-btn {
+    position: relative;
+    overflow: hidden;
+  }
+  .shimmer-btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: rotate(45deg);
+    transition: 0.5s;
+  }
+  .shimmer-btn:hover::after {
+    left: 120%;
+  }
+
+  .grid-bg {
+    background-image: radial-gradient(circle at 1px 1px, #201f1f 1px, transparent 0);
+    background-size: 40px 40px;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary;
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 12s linear infinite;
+  }
+}
