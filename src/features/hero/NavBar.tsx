@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Button } from '../../components/Button'
+import { MagneticButton } from '../../components/MagneticButton'
 import { useAppStore } from '../../store/useAppStore'
 
 export function NavBar() {
@@ -71,9 +71,9 @@ export function NavBar() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <Button variant="primary" size="sm" shimmer>
+            <MagneticButton variant="primary" size="sm" shimmer>
               Deploy Node
-            </Button>
+            </MagneticButton>
           </motion.div>
         </div>
       </div>

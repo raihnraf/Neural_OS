@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Check } from 'lucide-react'
-import { TerminalBlock } from '../../components/TerminalBlock'
+import { InteractiveTerminal } from '../../components/InteractiveTerminal'
 import { codeSnippetData } from '../../data/mockData'
 
 export function DeveloperTerminal() {
@@ -50,7 +50,7 @@ export function DeveloperTerminal() {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          <TerminalBlock code={codeSnippetData.code} language={codeSnippetData.language} />
+          <InteractiveTerminal code={codeSnippetData.code} language={codeSnippetData.language} />
         </motion.div>
       </div>
     </section>

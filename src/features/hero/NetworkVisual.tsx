@@ -1,15 +1,37 @@
-import { motion } from 'framer-motion'
+import { motion, useMotionValue, useSpring } from 'framer-motion'
+import { useEffect } from 'react'
 
 export function NetworkVisual() {
+  const mouseX = useMotionValue(0)
+  const mouseY = useMotionValue(0)
+  
+  const springConfig = { stiffness: 100, damping: 30 }
+  const rotateX = useSpring(mouseY, springConfig)
+  const rotateY = useSpring(mouseX, springConfig)
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 20
+      const y = (e.clientY / window.innerHeight - 0.5) * 20
+      mouseX.set(x)
+      mouseY.set(y)
+    }
+
+    window.addEventListener('mousemove', handleMouseMove)
+    return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [mouseX, mouseY])
   return (
-    <div className="relative w-full h-[300px] md:h-[400px] flex items-center justify-center opacity-40">
-      <div className="absolute inset-0 flex items-center justify-center">
+    <div className="relative w-full h-[300px] md:h-[400px] flex items-center justify-center opacity-40" style={{ perspective: '1000px' }}>
+      <motion.div
+        style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
+        className="absolute inset-0 flex items-center justify-center"
+      >
         <svg className="w-full h-full" viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="lineGrad" x1="0%" x2="100%" y1="0%" y2="0%">
-              <stop offset="0%" stopColor="#bbdef2" stopOpacity="0" />
-              <stop offset="50%" stopColor="#bbdef2" stopOpacity="0.5" />
-              <stop offset="100%" stopColor="#bbdef2" stopOpacity="0" />
+              <stop offset="0%" stopColor="#ecf7ff" stopOpacity="0" />
+              <stop offset="50%" stopColor="#ddb7ff" stopOpacity="0.6" />
+              <stop offset="100%" stopColor="#ecf7ff" stopOpacity="0" />
             </linearGradient>
           </defs>
           
@@ -41,7 +63,7 @@ export function NetworkVisual() {
           <g className="network-lines">
             <motion.line
               stroke="url(#lineGrad)"
-              strokeWidth="1"
+              strokeWidth="1.5"
               x1="200"
               x2="800"
               y1="100"
@@ -52,7 +74,7 @@ export function NetworkVisual() {
             />
             <motion.line
               stroke="url(#lineGrad)"
-              strokeWidth="1"
+              strokeWidth="1.5"
               x1="200"
               x2="800"
               y1="300"
@@ -92,7 +114,7 @@ export function NetworkVisual() {
             />
           </g>
         </svg>
-      </div>
+      </motion.div>
     </div>
   )
 }

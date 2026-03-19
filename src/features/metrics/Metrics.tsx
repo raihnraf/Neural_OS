@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { metricsData } from '../../data/mockData'
+import { CountUp } from '../../hooks/useCountUp'
 
 const colorMap = {
   primary: 'text-primary',
@@ -28,7 +29,7 @@ export function Metrics() {
                   colorMap[metric.color]
                 )}
               >
-                {metric.value}
+                <CountUp value={metric.value} />
               </motion.div>
               <div className="text-[0.6875rem] uppercase tracking-[0.2em] font-bold text-on-surface-variant">
                 {metric.label}

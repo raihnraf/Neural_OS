@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Button } from '../../components/Button'
+import { MagneticButton } from '../../components/MagneticButton'
 import { Badge } from '../../components/Badge'
 import { NetworkVisual } from './NetworkVisual'
 
@@ -50,20 +50,28 @@ export function Hero() {
           transition={{ delay: 0.5 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <Button variant="primary" size="lg" shimmer className="w-full sm:w-auto">
+          <MagneticButton variant="primary" size="lg" shimmer className="w-full sm:w-auto">
             Get Started
-          </Button>
-          <Button variant="outline" size="lg" className="w-full sm:w-auto">
+          </MagneticButton>
+          <MagneticButton variant="outline" size="lg" className="w-full sm:w-auto">
             Read the Docs
-          </Button>
+          </MagneticButton>
         </motion.div>
+
+        {/* Purple gradient divider */}
+        <motion.div
+          initial={{ opacity: 0, width: 0 }}
+          animate={{ opacity: 1, width: '100%' }}
+          transition={{ delay: 0.7, duration: 0.8 }}
+          className="w-full max-w-md mx-auto h-px bg-gradient-to-r from-transparent via-[#ddb7ff]/70 to-transparent mt-12"
+        />
 
         {/* Network Visual */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="mt-20"
+          className="mt-12"
         >
           <NetworkVisual />
         </motion.div>
