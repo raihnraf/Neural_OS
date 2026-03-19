@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { MagneticButton } from '../../components/MagneticButton'
 import { useAppStore } from '../../store/useAppStore'
 
@@ -16,10 +17,11 @@ export function NavBar() {
   }, [])
 
   const navLinks = [
-    { name: 'Solutions', href: '#solutions' },
-    { name: 'Developers', href: '#developers' },
-    { name: 'Network', href: '#network' },
-    { name: 'Pricing', href: '#pricing' },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'Developers', href: '/developers' },
+    { name: 'Network', href: '/network' },
+    { name: 'Resources', href: '/resources' },
+    { name: 'Pricing', href: '/pricing' },
   ]
 
   return (
@@ -36,24 +38,28 @@ export function NavBar() {
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="text-xl font-bold tracking-tighter text-primary"
         >
-          NEURAL_OS
+          <Link to="/" className="text-xl font-bold tracking-tighter text-primary">
+            NEURAL_OS
+          </Link>
         </motion.div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8 font-body font-medium text-sm tracking-tight">
           {navLinks.map((link, index) => (
-            <motion.a
+            <motion.div
               key={link.name}
-              href={link.href}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="text-on-surface-variant hover:text-primary transition-colors"
             >
-              {link.name}
-            </motion.a>
+              <Link
+                to={link.href}
+                className="text-on-surface-variant hover:text-primary transition-colors"
+              >
+                {link.name}
+              </Link>
+            </motion.div>
           ))}
         </div>
 
