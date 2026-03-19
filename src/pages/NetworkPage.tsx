@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { MaterialSymbols, MagneticButton, TopNav } from '@/components'
+import { MaterialSymbols, MagneticButton, TopNav, InteractiveGlobe } from '@/components'
 
 const latencyData = [
   { region: 'North America', latency: '0.8ms', percentage: 92 },
@@ -71,27 +71,8 @@ export default function NetworkPage() {
         </div>
 
         {/* Global Map Visualization */}
-        <div className="lg:col-span-7 relative h-[600px] rounded-xl overflow-hidden bg-surface-container-lowest border border-outline-variant/10 group">
-          <div className="absolute inset-0 bg-gradient-to-tr from-secondary/5 via-transparent to-primary/5 opacity-50"></div>
-          <img
-            alt="Planetary data grid"
-            className="w-full h-full object-cover opacity-60 mix-blend-screen scale-110 group-hover:scale-100 transition-transform duration-[20s]"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRh5f_iyOLEQRPLh5mPcLCOtLXwuhtaCb4h0olwDYMz5Y9dKMDrdEi5VZ-_3JYMS1Brql16T9M67jtpIubb_mtXaqekhd4rRxcj47UUsTLERs1iN82rgEplkW_etoZw1Ni5JmbjifpHPs7t47DiGGh-UWqVuN8Msptutcs1huiocwsS9z63TyPQSLOhm4w-B7LLK_bFxCGqEuFOv_Clkpj397kk4wRrSb29gg-O7iszc8DCvThFXCwiSaJnnh4fBubTkrp536MOAsu"
-          />
-          
-          {/* Floating Data Pointers */}
-          <div className="absolute top-1/4 left-1/3 bg-surface-container-highest/80 backdrop-blur px-3 py-1 rounded-full border border-primary/30 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></span>
-            <span className="text-[0.6875rem] font-mono text-primary">US-EAST-1: ACTIVE</span>
-          </div>
-          <div className="absolute bottom-1/3 right-1/4 bg-surface-container-highest/80 backdrop-blur px-3 py-1 rounded-full border border-secondary/30 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 bg-secondary rounded-full animate-pulse"></span>
-            <span className="text-[0.6875rem] font-mono text-secondary">EU-WEST-2: SYNCING</span>
-          </div>
-          <div className="absolute top-1/2 right-1/3 bg-surface-container-highest/80 backdrop-blur px-3 py-1 rounded-full border border-tertiary/30 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 bg-tertiary rounded-full animate-pulse"></span>
-            <span className="text-[0.6875rem] font-mono text-tertiary">AP-SOUTH-1: PEAK</span>
-          </div>
+        <div className="lg:col-span-7 relative h-[600px] rounded-xl overflow-hidden bg-surface-container-lowest border border-outline-variant/10">
+          <InteractiveGlobe />
         </div>
       </section>
 

@@ -23,16 +23,28 @@ export function DeveloperNav() {
             Developers
           </Link>
           <Link
-            to="/dashboard"
+            to="/network"
             className="text-[#c2c7cc] hover:text-[#ecf7ff] transition-colors"
           >
-            Dashboard
+            Network
           </Link>
           <Link
             to="/resources"
             className="text-[#c2c7cc] hover:text-[#ecf7ff] transition-colors"
           >
             Resources
+          </Link>
+          <Link
+            to="/pricing"
+            className="text-[#c2c7cc] hover:text-[#ecf7ff] transition-colors"
+          >
+            Pricing
+          </Link>
+          <Link
+            to="/dashboard"
+            className="text-[#c2c7cc] hover:text-[#ecf7ff] transition-colors"
+          >
+            Dashboard
           </Link>
         </div>
 

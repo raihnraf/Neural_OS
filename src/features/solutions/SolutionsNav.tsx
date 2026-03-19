@@ -18,8 +18,10 @@ export function SolutionsNav() {
   const navLinks = [
     { name: 'Solutions', href: '/solutions' },
     { name: 'Developers', href: '/developers' },
-    { name: 'Dashboard', href: '/dashboard' },
+    { name: 'Network', href: '/network' },
     { name: 'Resources', href: '/resources' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Dashboard', href: '/dashboard' },
   ]
 
   return (

@@ -22,6 +22,7 @@ export function NavBar() {
     { name: 'Network', href: '/network' },
     { name: 'Resources', href: '/resources' },
     { name: 'Pricing', href: '/pricing' },
+    { name: 'Dashboard', href: '/dashboard' },
   ]
 
   return (

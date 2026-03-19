@@ -27,6 +27,7 @@ export function TopNav({ activePage = '' }: TopNavProps) {
     { name: 'Network', href: '/network' },
     { name: 'Resources', href: '/resources' },
     { name: 'Pricing', href: '/pricing' },
+    { name: 'Dashboard', href: '/dashboard' },
   ]
 
   return (
