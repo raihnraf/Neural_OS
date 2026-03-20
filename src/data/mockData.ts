@@ -28,13 +28,12 @@ export const productsData: Product[] = [
   {
     id: 'secure-training',
     title: 'Secure Training Data',
-    description: 'High-fidelity labeling pipelines for LLMs, computer vision, and generative models with built-in PII redaction.',
+    description:
+      'High-fidelity labeling pipelines for LLMs, computer vision, and generative models with built-in PII redaction.',
     icon: 'database',
     color: 'primary',
     size: 'large',
-    metrics: [
-      { label: 'Ingestion Rate', value: '4.2 PB/s' }
-    ]
+    metrics: [{ label: 'Ingestion Rate', value: '4.2 PB/s' }],
   },
   {
     id: 'model-evaluation',
@@ -43,9 +42,7 @@ export const productsData: Product[] = [
     icon: 'analytics',
     color: 'secondary',
     size: 'small',
-    metrics: [
-      { label: 'ACCURACY', value: '88.4%', progress: 88.4 }
-    ]
+    metrics: [{ label: 'ACCURACY', value: '88.4%', progress: 88.4 }],
   },
   {
     id: 'privacy-guardrails',
@@ -62,7 +59,7 @@ export const productsData: Product[] = [
     icon: 'psychology',
     color: 'secondary',
     size: 'medium',
-  }
+  },
 ]
 
 export const metricsData: Metric[] = [
@@ -70,20 +67,20 @@ export const metricsData: Metric[] = [
     id: 'accuracy',
     value: '99.9%',
     label: 'Labeling Accuracy',
-    color: 'primary'
+    color: 'primary',
   },
   {
     id: 'tokens',
     value: '10B+',
     label: 'Tokens Processed',
-    color: 'secondary'
+    color: 'secondary',
   },
   {
     id: 'nodes',
     value: '500+',
     label: 'Enterprise Nodes',
-    color: 'tertiary'
-  }
+    color: 'tertiary',
+  },
 ]
 
 export const codeSnippetData: CodeSnippet = {
@@ -101,5 +98,5 @@ response = client.training.deploy(
     auto_scale=True
 )
 
-print(f"Node live at: {response.endpoint}")`
+print(f"Node live at: {response.endpoint}")`,
 }

@@ -13,7 +13,7 @@ export function SolutionsHero() {
           Neural Framework v2.0
         </span>
       </motion.div>
-      
+
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -23,15 +23,15 @@ export function SolutionsHero() {
         Intelligence engineered for{' '}
         <span className="text-primary-container">critical infrastructure.</span>
       </motion.h1>
-      
+
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
         className="text-on-surface-variant text-lg max-w-2xl leading-relaxed"
       >
-        Neural OS provides the deterministic execution environment required for
-        industry-specific AI workloads. Deploy with the precision of a high-performance kernel.
+        Neural OS provides the deterministic execution environment required for industry-specific AI
+        workloads. Deploy with the precision of a high-performance kernel.
       </motion.p>
     </header>
   )

@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 export function NetworkVisual() {
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
-  
+
   const springConfig = { stiffness: 100, damping: 30 }
   const rotateX = useSpring(mouseY, springConfig)
   const rotateY = useSpring(mouseX, springConfig)
@@ -21,7 +21,10 @@ export function NetworkVisual() {
     return () => window.removeEventListener('mousemove', handleMouseMove)
   }, [mouseX, mouseY])
   return (
-    <div className="relative w-full h-[300px] md:h-[400px] flex items-center justify-center opacity-40" style={{ perspective: '1000px' }}>
+    <div
+      className="relative w-full h-[300px] md:h-[400px] flex items-center justify-center opacity-40"
+      style={{ perspective: '1000px' }}
+    >
       <motion.div
         style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
         className="absolute inset-0 flex items-center justify-center"
@@ -34,7 +37,7 @@ export function NetworkVisual() {
               <stop offset="100%" stopColor="#ecf7ff" stopOpacity="0" />
             </linearGradient>
           </defs>
-          
+
           {/* Concentric circles */}
           <motion.circle
             cx="500"
@@ -83,7 +86,7 @@ export function NetworkVisual() {
               animate={{ pathLength: 1, opacity: 1 }}
               transition={{ duration: 1.5, delay: 1 }}
             />
-            
+
             {/* Nodes */}
             <motion.circle
               cx="200"

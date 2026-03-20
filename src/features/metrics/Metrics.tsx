@@ -25,7 +25,7 @@ export function Metrics() {
               <motion.div
                 whileHover={{ scale: 1.1 }}
                 className={cn(
-                  "text-6xl md:text-7xl font-black mb-2 transition-transform duration-500",
+                  'text-6xl md:text-7xl font-black mb-2 transition-transform duration-500',
                   colorMap[metric.color]
                 )}
               >

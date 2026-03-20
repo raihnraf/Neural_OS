@@ -1,0 +1,15 @@
+# Replit Configuration for Neural OS Portfolio
+# https://docs.replit.com/replit-ide/replit-configuration-file
+
+run = "npm run dev"
+
+[modules]
+node = "20"
+
+[deployment]
+# Static deployment configuration
+run = ["npm run preview"]
+build = ["npm install", "npm run build"]
+
+# Environment variables (add actual values in Replit Secrets)
+# VITE_API_URL = https://your-api.com

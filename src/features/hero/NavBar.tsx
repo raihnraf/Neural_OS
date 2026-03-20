@@ -28,18 +28,15 @@ export function NavBar() {
   return (
     <nav
       className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-300",
+        'fixed top-0 w-full z-50 transition-all duration-300',
         isScrolled
-          ? "bg-surface-dim/80 backdrop-blur-xl border-b border-outline-variant/20 shadow-[0_0_15px_rgba(187,222,242,0.05)]"
-          : "bg-transparent border-b border-transparent"
+          ? 'bg-surface-dim/80 backdrop-blur-xl border-b border-outline-variant/20 shadow-[0_0_15px_rgba(187,222,242,0.05)]'
+          : 'bg-transparent border-b border-transparent'
       )}
     >
       <div className="flex justify-between items-center max-w-7xl mx-auto px-6 h-16">
         {/* Logo */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-        >
+        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
           <Link to="/" className="text-xl font-bold tracking-tighter text-primary">
             NEURAL_OS
           </Link>

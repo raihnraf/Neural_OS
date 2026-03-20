@@ -20,9 +20,7 @@ export function Footer() {
             viewport={{ once: true }}
             className="flex flex-col gap-2"
           >
-            <div className="text-lg font-black text-primary">
-              NEURAL OS
-            </div>
+            <div className="text-lg font-black text-primary">NEURAL OS</div>
             <p className="font-body text-[0.6875rem] uppercase tracking-[0.1em] font-light text-primary-container opacity-70">
               © 2026 NEURAL OS. Planetary-scale intelligence engine.
             </p>

@@ -41,10 +41,7 @@ export function TopNav({ activePage = '' }: TopNavProps) {
     >
       <div className="flex justify-between items-center max-w-[1440px] mx-auto px-8 h-full">
         {/* Logo */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-        >
+        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
           <Link to="/" className="text-xl font-bold tracking-tighter text-primary font-headline">
             Neural OS
           </Link>
@@ -53,7 +50,9 @@ export function TopNav({ activePage = '' }: TopNavProps) {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8 font-['Inter'] font-semibold tracking-tight text-sm">
           {navLinks.map((link, index) => {
-            const isActive = link.href === location.pathname || link.name.toLowerCase() === activePage.toLowerCase()
+            const isActive =
+              link.href === location.pathname ||
+              link.name.toLowerCase() === activePage.toLowerCase()
             return (
               <motion.div
                 key={link.name}

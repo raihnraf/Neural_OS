@@ -41,13 +41,22 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  // ⚠️ CRITICAL for Replit deployment
+  server: {
+    host: '0.0.0.0',
+    port: 5000,  // Replit standard port
+  },
+  base: '/',
   build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
     rollupOptions: {
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
           'motion-vendor': ['framer-motion'],
           'query-vendor': ['@tanstack/react-query'],
+          'globe-vendor': ['react-globe.gl', 'three'],
         },
       },
     },

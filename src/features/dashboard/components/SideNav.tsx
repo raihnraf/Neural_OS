@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion'
+import { Link, useLocation } from 'react-router-dom'
 
 const navItems = [
   { icon: 'dashboard', label: 'Overview', path: '/dashboard' },
@@ -7,10 +7,10 @@ const navItems = [
   { icon: 'key', label: 'API Keys', path: '/dashboard/api-keys' },
   { icon: 'database', label: 'Logs', path: '/dashboard/logs' },
   { icon: 'shield', label: 'Security', path: '/dashboard/security' },
-];
+]
 
 export function SideNav() {
-  const location = useLocation();
+  const location = useLocation()
 
   return (
     <aside className="h-screen w-64 fixed left-0 top-0 border-r border-outline-variant/20 bg-surface-container-lowest z-40 hidden md:block">
@@ -23,7 +23,9 @@ export function SideNav() {
             </div>
             <div>
               <p className="text-sm font-bold text-primary tracking-tight">System Admin</p>
-              <p className="text-[10px] text-on-surface-variant uppercase tracking-widest">Neural Node 01</p>
+              <p className="text-[10px] text-on-surface-variant uppercase tracking-widest">
+                Neural Node 01
+              </p>
             </div>
           </div>
         </div>
@@ -31,15 +33,16 @@ export function SideNav() {
         {/* Navigation */}
         <nav className="flex-1 font-body text-sm tracking-wide">
           {navItems.map((item) => {
-            const isActive = location.pathname === item.path;
+            const isActive = location.pathname === item.path
             return (
               <Link key={item.path} to={item.path}>
                 <motion.div
                   className={`
                     flex items-center gap-3 px-4 py-3 cursor-pointer transition-all
-                    ${isActive 
-                      ? 'bg-surface-container text-primary border-l-2 border-secondary' 
-                      : 'text-on-surface-variant hover:bg-surface-container/50 hover:text-primary'
+                    ${
+                      isActive
+                        ? 'bg-surface-container text-primary border-l-2 border-secondary'
+                        : 'text-on-surface-variant hover:bg-surface-container/50 hover:text-primary'
                     }
                   `}
                   whileHover={{ x: 4 }}
@@ -49,7 +52,7 @@ export function SideNav() {
                   <span>{item.label}</span>
                 </motion.div>
               </Link>
-            );
+            )
           })}
         </nav>
 
@@ -62,7 +65,7 @@ export function SideNav() {
           >
             Deploy Model
           </motion.button>
-          
+
           <div className="mt-6 space-y-2">
             <Link to="/docs">
               <div className="text-on-surface-variant hover:text-primary transition-all flex items-center gap-3 px-2 py-2 cursor-pointer text-xs">
@@ -80,5 +83,5 @@ export function SideNav() {
         </div>
       </div>
     </aside>
-  );
+  )
 }

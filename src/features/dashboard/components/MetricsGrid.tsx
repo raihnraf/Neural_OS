@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
-import { useDashboardStore } from '../store/dashboardStore';
+import { motion } from 'framer-motion'
+import { useDashboardStore } from '../store/dashboardStore'
 
 export function MetricsGrid() {
-  const { data } = useDashboardStore();
+  const { data } = useDashboardStore()
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
@@ -15,7 +15,9 @@ export function MetricsGrid() {
       >
         <div className="flex justify-between items-start">
           <div>
-            <p className="text-[10px] uppercase tracking-widest text-on-surface-variant font-medium">Mean Latency</p>
+            <p className="text-[10px] uppercase tracking-widest text-on-surface-variant font-medium">
+              Mean Latency
+            </p>
             <h3 className="text-4xl font-bold text-primary mt-2 group-hover:scale-105 transition-transform origin-left">
               {data.latency.toFixed(1)}
               <span className="text-lg font-normal ml-1">ms</span>
@@ -46,7 +48,9 @@ export function MetricsGrid() {
       >
         <div className="flex justify-between items-start">
           <div>
-            <p className="text-[10px] uppercase tracking-widest text-on-surface-variant font-medium">Throughput</p>
+            <p className="text-[10px] uppercase tracking-widest text-on-surface-variant font-medium">
+              Throughput
+            </p>
             <h3 className="text-4xl font-bold text-secondary mt-2 group-hover:scale-105 transition-transform origin-left">
               {(data.throughput / 1000).toFixed(1)}k
               <span className="text-lg font-normal ml-1">req/s</span>
@@ -75,15 +79,19 @@ export function MetricsGrid() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
       >
-        <p className="text-[10px] uppercase tracking-widest text-on-surface-variant font-medium">Model Accuracy</p>
+        <p className="text-[10px] uppercase tracking-widest text-on-surface-variant font-medium">
+          Model Accuracy
+        </p>
         <div className="mt-4 flex items-center justify-between">
           <h3 className="text-3xl font-bold text-tertiary">{data.accuracy.toFixed(1)}%</h3>
-          <div className="bg-tertiary/10 text-tertiary px-2 py-0.5 rounded text-[10px] font-bold">+0.4%</div>
+          <div className="bg-tertiary/10 text-tertiary px-2 py-0.5 rounded text-[10px] font-bold">
+            +0.4%
+          </div>
         </div>
         <p className="text-[10px] text-on-surface-variant/60 mt-4 leading-relaxed">
           Top-1 accuracy weighted across 4 active neural nodes.
         </p>
       </motion.div>
     </div>
-  );
+  )
 }

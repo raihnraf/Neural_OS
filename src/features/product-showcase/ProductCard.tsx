@@ -30,18 +30,19 @@ export function ProductCard({ product }: ProductCardProps) {
       className="bg-surface-container-low p-6 rounded-xl border border-outline-variant/10 glow-border h-full flex flex-col"
     >
       {/* Icon */}
-      <div className={cn("w-10 h-10 rounded flex items-center justify-center mb-4", colorMap[product.color])}>
+      <div
+        className={cn(
+          'w-10 h-10 rounded flex items-center justify-center mb-4',
+          colorMap[product.color]
+        )}
+      >
         <Icon className="w-6 h-6" />
       </div>
 
       {/* Content */}
       <div className="flex-1">
-        <h3 className="text-lg font-semibold text-on-surface mb-2">
-          {product.title}
-        </h3>
-        <p className="text-on-surface-variant text-sm leading-relaxed">
-          {product.description}
-        </p>
+        <h3 className="text-lg font-semibold text-on-surface mb-2">{product.title}</h3>
+        <p className="text-on-surface-variant text-sm leading-relaxed">{product.description}</p>
       </div>
 
       {/* Metrics */}
@@ -66,8 +67,15 @@ export function ProductCard({ product }: ProductCardProps) {
                         whileInView={{ height: `${height}%` }}
                         viewport={{ once: true }}
                         transition={{ delay: i * 0.1, duration: 0.5 }}
-                        className={cn("flex-1 rounded-t", product.color === 'primary' ? 'bg-primary' : product.color === 'secondary' ? 'bg-secondary' : 'bg-tertiary')}
-                        style={{ opacity: 0.2 + (i * 0.15) }}
+                        className={cn(
+                          'flex-1 rounded-t',
+                          product.color === 'primary'
+                            ? 'bg-primary'
+                            : product.color === 'secondary'
+                              ? 'bg-secondary'
+                              : 'bg-tertiary'
+                        )}
+                        style={{ opacity: 0.2 + i * 0.15 }}
                       />
                     ))}
                   </div>

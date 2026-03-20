@@ -1,4 +1,4 @@
-import type { DashboardData, Model, AuditLog } from '../types/dashboard.types';
+import type { DashboardData, Model, AuditLog } from '../types/dashboard.types'
 
 export const mockDashboardData: DashboardData = {
   latency: 14.2,
@@ -56,7 +56,7 @@ export const mockDashboardData: DashboardData = {
       usage: 0,
     },
   ] as Model[],
-};
+}
 
 export const signalData = [
   { time: '00:00', primary: 65, secondary: 45, tertiary: 55 },
@@ -65,4 +65,4 @@ export const signalData = [
   { time: '12:00', primary: 48, secondary: 65, tertiary: 58 },
   { time: '16:00', primary: 82, secondary: 42, tertiary: 52 },
   { time: '20:00', primary: 55, secondary: 58, tertiary: 68 },
-];
+]

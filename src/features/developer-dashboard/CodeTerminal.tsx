@@ -6,9 +6,9 @@ export function CodeTerminal() {
       <div className="bg-surface-container-high px-4 py-3 flex items-center justify-between border-b border-outline-variant/10">
         <div className="flex items-center gap-2">
           <div className="flex gap-1.5 mr-4">
-            <div className="w-2.5 h-2.5 rounded-full bg-error/40"></div>
-            <div className="w-2.5 h-2.5 rounded-full bg-secondary/40"></div>
-            <div className="w-2.5 h-2.5 rounded-full bg-primary/40"></div>
+            <div className="w-2.5 h-2.5 rounded-full bg-error/40" />
+            <div className="w-2.5 h-2.5 rounded-full bg-secondary/40" />
+            <div className="w-2.5 h-2.5 rounded-full bg-primary/40" />
           </div>
           <span className="text-[10px] font-mono text-on-surface-variant uppercase tracking-widest">
             inference_request.py
@@ -26,17 +26,12 @@ export function CodeTerminal() {
           <code>
             <span className="text-secondary">import</span> neural_os{'\n'}
             {'\n'}
-            <span className="text-on-surface-variant">
-              # Initialize the intelligent client
-            </span>
+            <span className="text-on-surface-variant"># Initialize the intelligent client</span>
             {'\n'}
             client = neural_os.Client(api_key=
-            <span className="text-tertiary">"nos_live_9x2p..."</span>
-            ){'\n'}
+            <span className="text-tertiary">"nos_live_9x2p..."</span>){'\n'}
             {'\n'}
-            <span className="text-on-surface-variant">
-              # Execute low-latency neural inference
-            </span>
+            <span className="text-on-surface-variant"># Execute low-latency neural inference</span>
             {'\n'}
             response = client.inference.create({'\n'}
             {'    '}
@@ -52,18 +47,17 @@ export function CodeTerminal() {
             <span className="text-primary">"content"</span>:{' '}
             <span className="text-tertiary">"Process tactical data."</span>
             {'\n'}
-            {'    '}{'}'}],{'\n'}
+            {'    '}
+            {'}'}],{'\n'}
             {'    '}
             stream=
             <span className="text-secondary">True</span>
-            {'\n'}
-            ){'\n'}
+            {'\n'}){'\n'}
             {'\n'}
             <span className="text-secondary">for</span> chunk{' '}
             <span className="text-secondary">in</span> response:{'\n'}
             {'    '}
-            <span className="text-secondary">print</span>(chunk.delta.content,
-            end=
+            <span className="text-secondary">print</span>(chunk.delta.content, end=
             <span className="text-tertiary">""</span>)
           </code>
         </pre>

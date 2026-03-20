@@ -35,10 +35,7 @@ export function SolutionsNav() {
     >
       <div className="flex justify-between items-center max-w-[1440px] mx-auto px-6 h-full">
         {/* Logo */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-        >
+        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
           <Link to="/" className="text-xl font-bold tracking-tighter text-primary font-headline">
             Neural OS
           </Link>

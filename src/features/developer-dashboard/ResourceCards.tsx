@@ -16,8 +16,7 @@ export function ResourceCards() {
           className="text-[10px] font-bold uppercase tracking-widest text-primary flex items-center gap-2"
           href="#community"
         >
-          Join Server{' '}
-          <ArrowUpRight className="w-3 h-3" />
+          Join Server <ArrowUpRight className="w-3 h-3" />
         </a>
       </div>
 
@@ -26,9 +25,9 @@ export function ResourceCards() {
         <div className="flex justify-between items-start mb-4">
           <BarChart3 className="text-tertiary w-9 h-9" />
           <div className="flex gap-1">
-            <div className="w-1 h-4 bg-tertiary rounded-full animate-pulse"></div>
-            <div className="w-1 h-4 bg-tertiary/60 rounded-full"></div>
-            <div className="w-1 h-4 bg-tertiary/30 rounded-full"></div>
+            <div className="w-1 h-4 bg-tertiary rounded-full animate-pulse" />
+            <div className="w-1 h-4 bg-tertiary/60 rounded-full" />
+            <div className="w-1 h-4 bg-tertiary/30 rounded-full" />
           </div>
         </div>
         <h4 className="text-lg font-semibold mb-2 group-hover:text-tertiary transition-colors">
@@ -41,8 +40,7 @@ export function ResourceCards() {
           className="text-[10px] font-bold uppercase tracking-widest text-primary flex items-center gap-2"
           href="#status"
         >
-          View Metrics{' '}
-          <ArrowUpRight className="w-3 h-3" />
+          View Metrics <ArrowUpRight className="w-3 h-3" />
         </a>
       </div>
 
@@ -59,8 +57,7 @@ export function ResourceCards() {
           className="text-[10px] font-bold uppercase tracking-widest text-primary flex items-center gap-2"
           href="#keys"
         >
-          Dashboard{' '}
-          <ArrowUpRight className="w-3 h-3" />
+          Dashboard <ArrowUpRight className="w-3 h-3" />
         </a>
       </div>
     </div>

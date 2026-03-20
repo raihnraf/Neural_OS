@@ -19,9 +19,7 @@ export function PartnersSection() {
           <span className="text-[0.6875rem] uppercase tracking-[0.2em] font-label text-secondary block mb-2">
             Ecosystem
           </span>
-          <h2 className="text-4xl font-semibold tracking-tight">
-            Strategic AI Partnerships
-          </h2>
+          <h2 className="text-4xl font-semibold tracking-tight">Strategic AI Partnerships</h2>
         </motion.div>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -30,8 +28,8 @@ export function PartnersSection() {
           transition={{ delay: 0.1 }}
           className="text-on-surface-variant max-w-md"
         >
-          We collaborate with industry leaders to ensure Neural OS remains the
-          gold standard for enterprise intelligence.
+          We collaborate with industry leaders to ensure Neural OS remains the gold standard for
+          enterprise intelligence.
         </motion.p>
       </div>
 
@@ -62,9 +60,7 @@ export function PartnersSection() {
       >
         <div className="flex gap-6 items-center">
           <div className="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
-            <span className="material-symbols-outlined text-on-secondary-container">
-              handshake
-            </span>
+            <span className="material-symbols-outlined text-on-secondary-container">handshake</span>
           </div>
           <div>
             <h4 className="text-lg font-semibold">Joint Innovation Program</h4>

@@ -1,7 +1,16 @@
-import { motion } from 'framer-motion';
-import { DashboardLayout, MetricsGrid, SignalDecomposition, AuditLogs, ModelRepository } from '../features/dashboard/components';
+import { motion } from 'framer-motion'
+import {
+  DashboardLayout,
+  MetricsGrid,
+  SignalDecomposition,
+  AuditLogs,
+  ModelRepository,
+} from '../features/dashboard/components'
+import { ANIMATION } from '@/constants'
 
-export function Dashboard() {
+const TRANSITION_DURATION = ANIMATION.NORMAL / 1000
+
+export default function DashboardPage() {
   return (
     <DashboardLayout>
       {/* Header Section */}
@@ -9,7 +18,7 @@ export function Dashboard() {
         className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: TRANSITION_DURATION }}
       >
         <div>
           <span className="text-[10px] uppercase tracking-[0.2em] font-medium text-secondary mb-2 block">
@@ -24,7 +33,7 @@ export function Dashboard() {
         </div>
         <div className="flex gap-3">
           <div className="bg-surface-container px-4 py-2 border border-outline-variant/10 rounded-lg flex items-center gap-3">
-            <div className="w-2 h-2 rounded-full bg-tertiary shadow-[0_0_8px_rgba(225,250,255,0.6)] animate-pulse"></div>
+            <div className="w-2 h-2 rounded-full bg-tertiary shadow-[0_0_8px_rgba(225,250,255,0.6)] animate-pulse" />
             <span className="text-xs font-medium text-tertiary">SYNCED</span>
           </div>
           <div className="bg-surface-container px-4 py-2 border border-outline-variant/10 rounded-lg">
@@ -46,5 +55,5 @@ export function Dashboard() {
       {/* Model Repository */}
       <ModelRepository />
     </DashboardLayout>
-  );
+  )
 }

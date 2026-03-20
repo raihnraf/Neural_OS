@@ -1,14 +1,14 @@
-import { motion } from 'framer-motion';
-import { useDashboardStore } from '../store/dashboardStore';
+import { motion } from 'framer-motion'
+import { useDashboardStore } from '../store/dashboardStore'
 
 export function AuditLogs() {
-  const { data } = useDashboardStore();
+  const { data } = useDashboardStore()
 
   const borderColorMap = {
     primary: 'border-primary/40',
     secondary: 'border-secondary/40',
     tertiary: 'border-tertiary/40',
-  };
+  }
 
   return (
     <motion.div
@@ -18,8 +18,12 @@ export function AuditLogs() {
       transition={{ delay: 0.5 }}
     >
       <div className="p-4 border-b border-outline-variant/10 flex justify-between items-center bg-surface-container-high/30">
-        <span className="text-xs font-bold uppercase tracking-widest text-on-surface">Audit Logs</span>
-        <span className="text-[10px] font-mono text-on-surface-variant">{data.logs.length} New</span>
+        <span className="text-xs font-bold uppercase tracking-widest text-on-surface">
+          Audit Logs
+        </span>
+        <span className="text-[10px] font-mono text-on-surface-variant">
+          {data.logs.length} New
+        </span>
       </div>
       <div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-[250px] scrollbar-hide">
         {data.logs.map((log, index) => (
@@ -39,5 +43,5 @@ export function AuditLogs() {
         ))}
       </div>
     </motion.div>
-  );
+  )
 }

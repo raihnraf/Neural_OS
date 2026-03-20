@@ -19,12 +19,10 @@ export function DeveloperTerminal() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold text-on-surface mb-6">
-            Built for Engineers
-          </h2>
+          <h2 className="text-4xl font-bold text-on-surface mb-6">Built for Engineers</h2>
           <p className="text-on-surface-variant text-lg leading-relaxed mb-8">
-            Integrate our data engine into your existing stack with three lines of code.
-            Support for all major frameworks and native cloud providers.
+            Integrate our data engine into your existing stack with three lines of code. Support for
+            all major frameworks and native cloud providers.
           </p>
           <ul className="space-y-4">
             {features.map((feature, index) => (

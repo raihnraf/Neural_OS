@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { useDashboardStore } from '../store/dashboardStore';
-import type { Model } from '../types/dashboard.types';
+import { motion } from 'framer-motion'
+import { useDashboardStore } from '../store/dashboardStore'
+import type { Model } from '../types/dashboard.types'
 
 const statusConfig = {
   deployed: {
@@ -21,17 +21,19 @@ const statusConfig = {
     bg: 'bg-tertiary/10',
     text: 'text-tertiary',
   },
-};
+}
 
 export function ModelRepository() {
-  const { data } = useDashboardStore();
+  const { data } = useDashboardStore()
 
   return (
     <section className="mt-12">
       <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="text-xl font-bold text-on-surface">Model Repository</h2>
-          <p className="text-xs text-on-surface-variant mt-1">Active deployments and model health indices.</p>
+          <p className="text-xs text-on-surface-variant mt-1">
+            Active deployments and model health indices.
+          </p>
         </div>
         <div className="flex gap-2">
           <motion.button
@@ -84,18 +86,22 @@ export function ModelRepository() {
         </table>
       </motion.div>
     </section>
-  );
+  )
 }
 
 function ModelRow({ model }: { model: Model }) {
-  const config = statusConfig[model.status];
+  const config = statusConfig[model.status]
 
   return (
     <>
       <td className="px-6 py-4 font-medium text-primary">{model.name}</td>
       <td className="px-6 py-4">
-        <span className={`inline-flex items-center gap-1.5 ${config.bg} ${config.text} px-2 py-0.5 rounded-full text-[10px] font-bold`}>
-          <span className={`w-1.5 h-1.5 rounded-full ${config.text === 'text-primary' ? 'animate-pulse' : ''} bg-current`}></span>
+        <span
+          className={`inline-flex items-center gap-1.5 ${config.bg} ${config.text} px-2 py-0.5 rounded-full text-[10px] font-bold`}
+        >
+          <span
+            className={`w-1.5 h-1.5 rounded-full ${config.text === 'text-primary' ? 'animate-pulse' : ''} bg-current`}
+          />
           {config.label}
         </span>
       </td>
@@ -117,5 +123,5 @@ function ModelRow({ model }: { model: Model }) {
         </button>
       </td>
     </>
-  );
+  )
 }

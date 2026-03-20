@@ -1,16 +1,16 @@
-import { motion } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion'
+import { Link, useLocation } from 'react-router-dom'
 
 const mainNavItems = [
   { label: 'Solutions', path: '/solutions' },
   { label: 'Developers', path: '/developers' },
   { label: 'Dashboard', path: '/dashboard' },
   { label: 'Resources', path: '/resources' },
-];
+]
 
 export function TopNav() {
-  const location = useLocation();
-  
+  const location = useLocation()
+
   return (
     <nav className="fixed top-0 w-full z-50 bg-surface-dim/80 backdrop-blur-xl border-b border-outline-variant/20 shadow-[0_0_15px_rgba(187,222,242,0.05)]">
       <div className="flex justify-between items-center h-16 px-6 max-w-[1440px] mx-auto">
@@ -21,22 +21,25 @@ export function TopNav() {
           </Link>
           <div className="hidden md:flex gap-6 font-body font-semibold tracking-tight">
             {mainNavItems.map((item) => {
-              const isActive = location.pathname === item.path || (item.path !== '/dashboard' && location.pathname.startsWith(item.path));
+              const isActive =
+                location.pathname === item.path ||
+                (item.path !== '/dashboard' && location.pathname.startsWith(item.path))
               return (
                 <Link
                   key={item.path}
                   to={item.path}
                   className={`
                     transition-colors
-                    ${isActive 
-                      ? 'text-primary border-b-2 border-primary pb-1' 
-                      : 'text-on-surface-variant hover:text-primary'
+                    ${
+                      isActive
+                        ? 'text-primary border-b-2 border-primary pb-1'
+                        : 'text-on-surface-variant hover:text-primary'
                     }
                   `}
                 >
                   {item.label}
                 </Link>
-              );
+              )
             })}
           </div>
         </div>
@@ -45,7 +48,9 @@ export function TopNav() {
         <div className="flex items-center gap-4">
           {/* Search */}
           <div className="hidden lg:flex items-center bg-surface-container-lowest border border-outline-variant/20 px-3 py-1.5 rounded-lg">
-            <span className="material-symbols-outlined text-on-surface-variant text-sm mr-2">search</span>
+            <span className="material-symbols-outlined text-on-surface-variant text-sm mr-2">
+              search
+            </span>
             <input
               className="bg-transparent border-none text-xs focus:ring-0 text-on-surface w-48 placeholder-on-surface-variant/50"
               placeholder="Search systems..."
@@ -82,5 +87,5 @@ export function TopNav() {
         </div>
       </div>
     </nav>
-  );
+  )
 }
