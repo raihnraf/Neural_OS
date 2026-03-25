@@ -64,22 +64,48 @@ export function Hero() {
           </MagneticButton>
         </motion.div>
 
-        {/* Purple gradient divider */}
+        {/* Feature Highlights */}
         <motion.div
-          initial={{ opacity: 0, width: 0 }}
-          animate={{ opacity: 1, width: '100%' }}
-          transition={{ delay: 0.7, duration: ANIMATION.SLOW / 1000 }}
-          className="w-full max-w-md mx-auto h-px bg-gradient-to-r from-transparent via-[#ddb7ff]/70 to-transparent mt-12"
-        />
-
-        {/* Network Visual */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.6, duration: ANIMATION.SLOW / 1000 }}
-          className="mt-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8"
         >
-          <NetworkVisual />
+          <div className="flex items-center gap-2 text-on-surface-variant text-sm">
+            <div className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
+            <span>No credit card required</span>
+          </div>
+          <div className="flex items-center gap-2 text-on-surface-variant text-sm">
+            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span>Free tier available</span>
+          </div>
+          <div className="flex items-center gap-2 text-on-surface-variant text-sm">
+            <div className="w-2 h-2 rounded-full bg-tertiary animate-pulse" />
+            <span>Setup in 5 minutes</span>
+          </div>
+        </motion.div>
+
+        {/* Scroll Indicator */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
+          className="mt-12 flex flex-col items-center gap-2"
+        >
+          <span className="text-on-surface-variant text-xs uppercase tracking-widest">Scroll to explore</span>
+          <svg
+            className="w-6 h-6 text-on-surface-variant"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
         </motion.div>
       </div>
     </section>
