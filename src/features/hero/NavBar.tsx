@@ -38,7 +38,7 @@ export function NavBar() {
         {/* Logo */}
         <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
           <Link to="/" className="text-xl font-bold tracking-tighter text-primary">
-            NEURAL_OS
+            NEURAL OS
           </Link>
         </motion.div>
 
