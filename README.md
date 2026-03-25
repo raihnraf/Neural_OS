@@ -1,177 +1,164 @@
-# NEURAL_OS Portfolio
+# NEURAL OS
+The Data Engine for Secure AI
 
-A high-performance portfolio landing page built with React, Vite, and Tailwind CSS. Designed with a sleek, futuristic dark theme inspired by modern AI/tech companies.
+A modern dashboard interface for AI security monitoring and infrastructure management. Built as a frontend-only prototype with mock data.
 
-## 🚀 Tech Stack
+**License:** MIT  
+**Built with:** React TypeScript
+
+## 🔗 Live Demo
+
+[https://neural-os-zeta.vercel.app/](https://neural-os-zeta.vercel.app/)
+
+## 📸 Screenshots
+
+### Dashboard
+![Dashboard](/home/raihan/Pictures/Screenshots/Screenshot%20from%202026-03-25%2007-11-24.png)
+
+### Workspace
+![Workspace](/home/raihan/Pictures/Screenshots/Screenshot%20from%202026-03-25%2007-11-50.png)
+
+## 🛠️ Tech Stack
 
 | Category | Technology |
 |----------|------------|
-| **Framework** | React 18 + TypeScript |
-| **Build Tool** | Vite |
-| **Styling** | Tailwind CSS |
-| **Animations** | Framer Motion |
-| **State Management** | Zustand |
-| **Data Fetching** | TanStack Query |
-| **Icons** | Lucide React |
-| **Deployment** | Vercel |
+| Framework | React 18 |
+| Language | TypeScript |
+| Routing | React Router v6 |
+| State Management | Zustand |
+| Styling | Tailwind CSS |
+| UI Components | Radix UI |
+| Animations | Framer Motion |
+| Icons | Lucide React |
+| Build Tool | Vite |
+| Deployment | Vercel |
 
-## ✨ Features
+**Note:** This is a frontend-only prototype. All data is stored locally in mock data files - no backend or API connection required.
 
-- **🎨 Custom Design System**: Complete NEURAL_OS theme with 40+ custom colors
-- **🎯 Feature-Based Architecture**: Scalable folder structure for easy maintenance
-- **⚡ Performance Optimized**: 
-  - Code splitting with manual chunks
-  - Image optimization with vite-plugin-imagemin
-  - Tree-shakable components
-- **🎭 Smooth Animations**: Framer Motion for buttery-smooth interactions
-- **📱 Fully Responsive**: Mobile-first design
-- **🌙 Dark Theme**: Professional dark mode by default
+## ✨ Key Features
+
+### 🎨 User Experience
+- **Responsive Design** - Adapts to different screen sizes
+- **Dark Theme** - Built-in dark mode with Tailwind CSS custom properties
+- **Smooth Animations** - UI transitions powered by Framer Motion
+- **Sidebar Navigation** - Multiple pages with consistent layout
+
+### 📄 Pages
+- **Dashboard** - Overview with metrics and activity feed
+- **Workspace** - Workspace management interface
+- **Vault** - File vault UI component
+- **Files** - File browser interface
+- **Settings** - Settings page layout
+- **Audit** - Audit logs display
+- **Security** - Security rules interface
+- **History** - History/chronological view
+
+### ⚡ Technical
+- **TypeScript** - Type-safe codebase
+- **Mock Data** - All data is local (no API required)
+- **Component Architecture** - Reusable UI components
+- **State Management** - Zustand for settings store
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js v18+ or higher
+- npm or yarn package manager
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/raihnraf/Neural_OS.git
+
+# Navigate to project directory
+cd Scale
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+The application will be available at `http://localhost:5173`
+
+### Build for Production
+
+```bash
+# Create production build
+npm run build
+
+# Preview production build locally
+npm run preview
+```
 
 ## 📁 Project Structure
 
 ```
 src/
-├── assets/          # Images, SVGs, global styles
-├── components/      # Reusable UI components (Button, Badge, etc.)
+├── assets/          # Static assets (images, fonts, global styles)
+├── components/      # Reusable UI components
+│   ├── layout/      # Layout components (Sidebar, Header, etc.)
+│   └── ui/          # Base UI components (Buttons, Cards, etc.)
 ├── data/            # Mock data and constants
-├── features/        # Feature-based modules
-│   ├── hero/              # Hero section with network animation
-│   ├── product-showcase/  # Bento grid product cards
-│   ├── developer-terminal/# Code terminal section
-│   └── metrics/           # Statistics section
+├── features/        # Feature-specific components
 ├── hooks/           # Custom React hooks
-├── pages/           # Page components
+├── lib/             # Utility libraries and configurations
+├── pages/           # Route-based page components
+│   ├── DashboardPage.tsx
+│   ├── WorkspacePage.tsx
+│   ├── VaultPage.tsx
+│   ├── FilesPage.tsx
+│   ├── SettingsPage.tsx
+│   ├── AuditPage.tsx
+│   ├── SecurityPage.tsx
+│   └── HistoryPage.tsx
 ├── store/           # Zustand state management
-├── utils/           # Helper functions
-└── App.tsx          # Main app component
+├── utils/           # Helper functions and utilities
+├── App.tsx          # Main application component
+├── routes.tsx       # Route configuration
+├── main.tsx         # Application entry point
+└── index.css        # Global styles
 ```
 
-## 🛠️ Getting Started
-
-### Prerequisites
-
-- Node.js 18+ 
-- npm or yarn
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd neural-os-portfolio
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open in browser**
-   Navigate to `http://localhost:5173`
-
-## 📦 Available Scripts
+## 📜 Available Scripts
 
 | Command | Description |
 |---------|-------------|
-| `npm run dev` | Start development server |
+| `npm run dev` | Start development server with hot reload |
 | `npm run build` | Build for production |
-| `npm run preview` | Preview production build |
-| `npm run lint` | Run ESLint |
-
-## 🎨 Customization
-
-### Theme Colors
-
-All theme colors are defined in `tailwind.config.js`. Modify the `colors` object to customize:
-
-```js
-colors: {
-  "primary": "#ecf7ff",
-  "secondary": "#ddb7ff",
-  "tertiary": "#e1faff",
-  // ... more colors
-}
-```
-
-### Adding New Features
-
-1. Create a new folder in `src/features/`
-2. Add components, hooks, and types
-3. Export from `index.ts`
-4. Import in your pages
-
-## 🚀 Deploy to Vercel
-
-### Option 1: Vercel CLI
-
-```bash
-npm install -g vercel
-vercel
-```
-
-### Option 2: GitHub Integration
-
-1. Push code to GitHub
-2. Go to [vercel.com](https://vercel.com)
-3. Import your repository
-4. Deploy automatically
-
-### Option 3: Vercel Dashboard
-
-1. Install Vercel CLI
-2. Run `vercel login`
-3. Run `vercel --prod`
-
-## 📊 Performance Tips
-
-- **Images**: Use WebP format, optimize with `vite-plugin-imagemin`
-- **Fonts**: Preload critical fonts (already configured)
-- **Code Splitting**: Automatic with Vite + manual chunks configured
-- **CSS**: Tailwind purges unused styles automatically
-
-## 🎯 Best Practices Implemented
-
-✅ **Industry-standard folder structure**
-✅ **TypeScript for type safety**
-✅ **Component-based architecture**
-✅ **Reusable UI components**
-✅ **State management with Zustand**
-✅ **Optimized for Vercel free tier**
-✅ **SEO-friendly meta tags**
-✅ **Accessibility considerations**
-
-## 📝 Environment Variables
-
-Create a `.env` file for API keys:
-
-```env
-VITE_API_KEY=your_api_key_here
-VITE_SITE_URL=https://your-domain.com
-```
+| `npm run preview` | Preview production build locally |
+| `npm run lint` | Run ESLint for code quality checks |
 
 ## 🤝 Contributing
 
+Contributions are welcome! Please feel free to submit a Pull Request.
+
 1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## 📄 License
 
-MIT License - feel free to use this project for your portfolio!
+This project is licensed under the MIT License.
+
+## 👨‍💻 Author
+
+**Raihan Rafi**
+
+- 💼 **LinkedIn:** [linkedin.com/in/raihnraf](https://linkedin.com/in/raihnraf)
+- 🐙 **GitHub:** [@raihnraf](https://github.com/raihnraf)
 
 ## 🙏 Acknowledgments
 
-- Design inspired by modern AI/tech landing pages
-- Built with best practices from the React community
-- Optimized for Vercel's edge network
+- **Radix UI** for accessible UI primitives
+- **Tailwind CSS** for the utility-first CSS framework
+- **Framer Motion** for smooth animations
+- **Lucide Icons** for beautiful icon set
 
 ---
 
-**Built with ❤️ using React + Vite + Tailwind CSS**
+*Built with ❤️ using React + TypeScript + Vite + Tailwind CSS*
