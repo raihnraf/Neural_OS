@@ -85,27 +85,17 @@ export function Hero() {
           </div>
         </motion.div>
 
-        {/* Scroll Indicator */}
+        {/* Animated Gradient Orb */}
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
-          className="mt-12 flex flex-col items-center gap-2"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.8, duration: 3 }}
+          className="mt-12 flex justify-center"
         >
-          <span className="text-on-surface-variant text-xs uppercase tracking-widest">Scroll to explore</span>
-          <svg
-            className="w-6 h-6 text-on-surface-variant"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
+          <div className="relative w-32 h-1">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-secondary to-transparent blur-sm animate-pulse" />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary to-transparent blur-md opacity-50" />
+          </div>
         </motion.div>
       </div>
     </section>
