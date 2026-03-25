@@ -7,12 +7,15 @@ import { LAYOUT, ANIMATION } from '@/constants'
 export function Hero() {
   return (
     <section
-      className="relative min-h-[921px] flex items-center justify-center overflow-hidden grid-bg"
-      style={{ minHeight: LAYOUT.MIN_SECTION_HEIGHT }}
+      className="relative min-h-[750px] flex items-center justify-center overflow-hidden grid-bg"
+      style={{ minHeight: 750 }}
     >
       {/* Background Decorative Glows */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-secondary-container/10 blur-[120px] rounded-full animate-pulse-glow" />
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-primary-container/10 blur-[120px] rounded-full animate-pulse-glow" />
+      
+      {/* Bottom Fade Gradient */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         {/* Badge */}
