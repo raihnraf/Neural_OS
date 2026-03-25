@@ -28,7 +28,6 @@ dist-ssr
 
 # Development & documentation
 todo.md
-screenshots/
 *.md.bak
 REFACTORING_*.md
 DEPLOYMENT_*.md
