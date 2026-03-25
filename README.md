@@ -13,10 +13,10 @@ A modern dashboard interface for AI security monitoring and infrastructure manag
 ## 📸 Screenshots
 
 ### Dashboard
-![Dashboard](/screenshots/Screenshot%20from%202026-03-25%2007-11-24.png)
+![Dashboard](public/screenshots/Screenshot%20from%202026-03-25%2007-11-24.png)
 
 ### Workspace
-![Workspace](/screenshots/Screenshot%20from%202026-03-25%2007-11-50.png)
+![Workspace](public/screenshots/Screenshot%20from%202026-03-25%2007-11-50.png)
 
 ## 🛠️ Tech Stack
 
