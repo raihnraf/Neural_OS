@@ -3,6 +3,7 @@ import { ProductShowcase } from '../features/product-showcase'
 import { DeveloperTerminal } from '../features/developer-terminal'
 import { Metrics } from '../features/metrics'
 import { Footer } from '../features/Footer'
+import { SocialProof } from '../features/social-proof'
 import { ScrollProgress } from '../components/ScrollProgress'
 import { ParticleBackground } from '../components/ParticleBackground'
 
@@ -13,6 +14,7 @@ function HomePage() {
       <ScrollProgress />
       <NavBar />
       <Hero />
+      <SocialProof />
       <ProductShowcase />
       <DeveloperTerminal />
       <Metrics />
